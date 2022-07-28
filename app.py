@@ -43,6 +43,9 @@ def allcontacts():
     print(allcontacts)
     return render_template('allcontacts.html',allcontacts=allcontacts)   
 
+@app.route('/addcontacs')
+def addcontacts():
+    return render_template('addcontacts.html')
 
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD

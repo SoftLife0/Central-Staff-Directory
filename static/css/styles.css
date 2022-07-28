@@ -1,0 +1,26 @@
+.top-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.ellipse{
+    width: 200px;
+    height: 200px;
+    background-color: ;
+    border-radius: 100%;
+    margin: auto;
+    background-image:
+}
+.img-eye{width: 200px;
+
+    }
+
+  .photo{
+   margin-left: 210px;
+  }
+
+  .form-control{
+    height: 500px;
+  }
