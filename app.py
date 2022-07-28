@@ -18,7 +18,7 @@ class Contacts(db.Model):
     email =db.Column(db.String() )
     password = db.Column(db.String(),default = "Central@123")
     department =  db.Column(db.String())
-    phone = db.Column(db.String() )
+    phone = db.Column(db.String())
     
     def __repr__(self):
         return f"Item('{self.name}', '{self.phone}', )"
@@ -36,9 +36,10 @@ def home():
         print(form.name.data)
         return redirect(url_for('allcontacts'))
     return render_template('index.html', form = form)
+    
 @app.route('/allcontacts')
 def allcontacts():
-    allcontacts= Contacts.query.all()
+    allcontacts= Contacts.query.order_by(Contacts.id.desc()).all()
     print(allcontacts)
     return render_template('allcontacts.html',allcontacts=allcontacts)   
 
