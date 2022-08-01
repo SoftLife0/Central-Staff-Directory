@@ -5,10 +5,14 @@ from traceback import format_stack
 from flask import Flask,redirect,url_for,render_template,request
 from forms import *
 from flask_sqlalchemy import SQLAlchemy 
+#from flask_login import UserMixin, login_user,current_user,logout_user 
+from flask_login import LoginManager
+
 app=Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SECRET_KEY']= 'ADKADKFJ'
 db = SQLAlchemy(app)
+login_manager = LoginManager(app)
 
 class Contacts(db.Model):
     id = db.Column(db.Integer, primary_key=True)

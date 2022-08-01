@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+body {
+  background: rgba(201, 103, 112, 0.767);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#app {
+  width: 350px;
+  height: 640px;
+  font-family: 'Roboto', sans-serif;
+  background: #f9f9f9;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+
+.container {
+  margin: 0px 10px;
+}
+
+.header {
+  height: 230px;
+  width: 100%;
+  background: rgba(225, 44, 59, 0.767);
+  position: relative;
+  background: linear-gradient(to right,rgba(225, 44, 59, 0.767), rgba(225, 44, 59, 0.67)), url('https://kuulpeeps.com/wp-content/uploads/2020/04/central-university-college-cu-campus.jpg');
+  background-size: cover;
+}
+
+.heading5 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #808080;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info-propic {
+  margin-top: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 100px;
+  border: 2px solid white;
+}
+
+.user-info-propic__image {
+  width: auto;
+  height: 100%;
+}
+
+.user-info__name {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.04rem;
+  margin: 15px 0 5px 0;
+}
+
+.user-info__position {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.user-info__location {
+  margin: 0;
+  font-size: 12px;
+  color: white;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.user-stats-card {
+  position : absolute;
+  bottom: -20px;
+  margin-left: 10px;
+  background:  white;
+  width: 325px;
+  height: 60px;
+  border-radius: 2px;
+  box-shadow: 0px 3px 30px rgba(0,0,0,0.2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+}
+
+.user-stats-card__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #f5f5f5;
+}
+
+.user-stats-card__stat:last-child {
+  border-right: none;
+}
+
+.user-stats-card__stat-value {
+  margin: 0;
+  color: #454545;
+}
+
+.user-stats-card__stat-type {
+  margin: 0;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+
+
+.activities {
+  margin: 30px 0 15px 0;
+}
+
+.activity {
+  display: flex;
+  align-items: center;
+}
+
+.activity-icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activity-icon i {
+  font-size: 7px;
+  color: white;
+}
+
+.activity-icon--pending {
+   background: #3ca1d5;
+}
+
+.activity-icon--resolved {
+  background: #25c33b;
+} 
+
+.activity-icon--failed {
+  background: #fe5051;
+}
+
+.activity-text {
+  padding: 0px 10px;
+  font-size: 13px;
+  opacity: 0.8;
+  margin: 8px 0;
+}
+
+
+
+.notification-card {
+  background: #6c74f3;
+  margin-left: 10px;
+  width: 325px;
+  height: 60px;
+  border-radius: 2px;
+  box-shadow: 0px 3px 30px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.notification-card__icon {
+  flex-basis: 50px;
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  color: white;
+}
+
+.notification-card__info {
+  color: white;
+}
+
+.notification-card__type {
+   margin: 2px 0;
+  font-size: 15px;
+}
+.notification-card__details {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/* User Card */
+
+.leaderboard-list {
+  background: white;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f8f8f8;
+  height: 60px;
+}
+
+.user-card-propic {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.user-card-info {
+  margin: 0px 10px;
+}
+
+.user-card-info__name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  color: #444444;
+}
+
+.user-card-info__streak {
+  margin: 5px 0;
+  font-size: 12px;
+  color: #ccccce;
+}
+
+/* Nav */ 
+
+
+.top{
+
+text-decoration: none;
+}
+
