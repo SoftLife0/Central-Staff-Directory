@@ -65,7 +65,7 @@ def admin():
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
-        flash(f'Welcome Nana Kweku','success')
+        flash(f'Welcome Likem','success')
         return redirect(url_for('admin'))
     return render_template('login.html')
 
