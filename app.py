@@ -1,18 +1,15 @@
+from crypt import methods
 import email
 from email.policy import default
 from multiprocessing import reduction
 from traceback import format_stack
-from flask import Flask,redirect,url_for,render_template,request
+from flask import Flask, flash,redirect,url_for,render_template,request
 from forms import *
 from flask_sqlalchemy import SQLAlchemy 
-#from flask_login import UserMixin, login_user,current_user,logout_user 
-from flask_login import LoginManager
-
 app=Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SECRET_KEY']= 'ADKADKFJ'
 db = SQLAlchemy(app)
-login_manager = LoginManager(app)
 
 class Contacts(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -47,9 +44,30 @@ def allcontacts():
     print(allcontacts)
     return render_template('allcontacts.html',allcontacts=allcontacts)   
 
-@app.route('/addcontacs')
+@app.route('/addcontacts', methods=['POST','GET'])
 def addcontacts():
-    return render_template('addcontacts.html')
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        newContact = Contacts(name = form.name.data, phone = form.phone.data, department = form.department.data, identification = form.identification.data, email = form.email.data)
+        db.session.add(newContact)
+        db.session.commit()
+        print(form.name.data)
+        flash(f''+ form.name.data +' added successfully','successful')
+        return redirect(url_for('admin'))
+    return render_template('form.html', form=form)
+
+@app.route('/admin')
+def admin():
+    allcontacts= Contacts.query.order_by(Contacts.id.desc()).all()
+    print(allcontacts)
+    return render_template('admin.html', allcontacts=allcontacts)
+
+@app.route('/login', methods=['GET','POST'])
+def login():
+    if request.method == 'POST':
+        flash(f'Welcome Nana Kweku','success')
+        return redirect(url_for('admin'))
+    return render_template('login.html')
 
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
