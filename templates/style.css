@@ -1,0 +1,74 @@
+.header{
+	background-image: url(https://central.edu.gh/directory/photo/62/CU%20Block5.jpg);
+	background-size: cover;
+	min-height: 500px;
+	object-fit: contain;
+	opacity: 180%;
+}
+.nav img{
+	width: 12%;
+	margin: 20px;
+}
+.nav-bar{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.avatar{
+	background-color: white;
+	border-radius: 25px;
+	padding: 10px 10px 10px 20px;
+	display: flex;
+	justify-content: right;
+	align-items: right;
+	height: 50px;
+}
+.arrow{
+	padding-right: 10px;
+}
+.heading{
+	margin: 30px 0 20px 80px;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+.head{
+	font-weight: bold	
+}
+
+.form{
+	padding: 20px;
+	background-color: white;
+	width: 55%;
+	border-radius: 30px;
+	margin: 50px 0 0 80px;
+}
+input{
+	border: none;
+	border-bottom: 2px solid black;
+	background: transparent;
+}
+input:focus{
+	outline: none;
+}
+.middle-ellipse{
+	border-radius: 30px;
+	background-color: rgb(0 40 100);
+	width: 30%;
+	padding: 10px;
+	margin: 50px;
+}
+.ellipse{
+	border-radius: 50%;
+	width: 40%;
+}
+.profile{
+	border-radius: 20px;
+	background-color: grey;
+	width: 27%;
+
+}
+.ellipse img{
+	width: 50%;
+
+}

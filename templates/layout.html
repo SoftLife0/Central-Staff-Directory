@@ -5,48 +5,18 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="style.css">
+    <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/adminStyle.css') }}"> -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
-</head>
+  </head>
   <body>
-    <div class="container">
-    <div class="top-row">
-        <h4>Groups</h4>
-        <h4>+</h4>
-    </div>  
-    <div>
-        <H1>Contacts</H1>
+      
+{% block body %}
 
-    </div>
-
-    <div class="form-group">
-      <label for=""></label>
-      <input type="text"
-        class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-
-    <div class="myprofile">
-        <div class="ellipse"></div>
-         <div>
-            <H4>Name</H4>
-            <h6>My Card</h6>
-
-         </div>
-    </div>
-
-    <section>
-        {% for contact in allcontacts %}
-        <div class="contact">
-            <H6><b>{{contact.name}}</b></H6>
-            <H6>{{contact.phone}}</H6>
-        </div>
-        {% endfor %}
-    </section>
-</div>
-
+{% endblock %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
