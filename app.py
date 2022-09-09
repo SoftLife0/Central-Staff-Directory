@@ -36,13 +36,13 @@ def home():
 
         print(form.name.data)
         return redirect(url_for('allcontacts'))
-    return render_template('index.html', form = form)
+    return render_template('login.html', form = form)
     
 @app.route('/allcontacts')
 def allcontacts():
     allcontacts= Contacts.query.order_by(Contacts.id.desc()).all()
     print(allcontacts)
-    return render_template('allcontacts.html',allcontacts=allcontacts)   
+    return render_template('admin.html',allcontacts=allcontacts)   
 
 @app.route('/addcontacts', methods=['POST','GET'])
 def addcontacts():
